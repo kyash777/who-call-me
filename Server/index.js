@@ -10,7 +10,7 @@ import Report from "./Model/report.js"
 const app = express();
 
 app.use(cors({
-    origin:"https://who-call-me-0.vercel.app",
+    origin:"https://who-call-me-dild.vercel.app/",
     methods:["POST","GET"],
     credentials:true
 }));
