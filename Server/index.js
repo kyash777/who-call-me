@@ -9,11 +9,7 @@ import Report from "./Model/report.js"
 
 const app = express();
 
-app.use(cors({
-    origin:"https://who-call-me-dild-12qj0yrrw-kyash777s-projects.vercel.app",
-    methods:["POST","GET"],
-    credentials:true
-}));
+app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }))
 
