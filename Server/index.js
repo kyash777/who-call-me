@@ -71,7 +71,8 @@ app.post("/report", async (req, res) => {
 })
 
 
-Connection("mongodb+srv://YASH:Yash2001@cluster0.za6wx7x.mongodb.net/phoneDB")
+const url = process.env.URL
+Connection(url)
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Your server is running successfully on PORT ${PORT}`));
