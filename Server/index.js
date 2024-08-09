@@ -13,8 +13,9 @@ dotenv.config()
 const app = express();
 
 app.use(cors({
-    origin: '*',
+    origin: ['https://who-call-me-dild.vercel.app'],
 }));
+
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }))
