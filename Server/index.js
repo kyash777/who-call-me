@@ -4,9 +4,7 @@ import bodyParser from 'body-parser';
 import axios from 'axios';
 import Connection from './Database/db.js';
 import Report from "./Model/report.js"
-import dotenv from "dotenv"
 
-dotenv.config()
 
 
 
