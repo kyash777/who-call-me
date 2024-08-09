@@ -12,17 +12,7 @@ dotenv.config()
 
 const app = express();
 
-app.use(cors({
-    origin: ['https://who-call-me-dild.vercel.app'],
-}));
-
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://who-call-me-dild.vercel.app'); // Update with your client URL
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
-
+app.use(cors())
 
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -84,9 +74,8 @@ app.post("/report", async (req, res) => {
     }
 })
 
-const url=process.env.URL
 
-Connection(url)
+Connection("mongodb+srv://ankit:ankit2001@cluster0.bjyab.mongodb.net/phoneDB")
 
 const PORT = process.env.PORT || 8000;
 
