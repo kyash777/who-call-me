@@ -4,6 +4,9 @@ import bodyParser from 'body-parser';
 import axios from 'axios';
 import Connection from './Database/db.js';
 import Report from "./Model/report.js"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 
 
@@ -70,8 +73,10 @@ app.post("/report", async (req, res) => {
     }
 })
 
+const url=process.env.URL
 
-Connection("mongodb+srv://YASH:Yash2001@cluster0.za6wx7x.mongodb.net/phoneDB")
+Connection(url)
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => console.log(`Your server is running successfully on PORT ${PORT}`));
